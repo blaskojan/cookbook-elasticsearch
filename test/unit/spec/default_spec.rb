@@ -10,6 +10,7 @@ describe 'elasticsearch::default' do
         let(:chef_run) do
           ChefSpec::ServerRunner.new(platform: platform, version: version) do |node, server|
             node_resources(node) # data for this node
+            node.normal['elasticsearch']['install']['version'] = '7.0.0'
             stub_chef_zero(platform, version, server) # stub other nodes in chef-zero
           end.converge(described_recipe)
         end
