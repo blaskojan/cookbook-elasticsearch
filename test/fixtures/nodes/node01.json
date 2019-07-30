@@ -18,6 +18,11 @@
   },
   "chef_type": "node",
   "default": {
+    "elasticsearch": {
+      "install": {
+        "version": "7.0.0"
+      }
+    }
   },
   "override": {
   },
